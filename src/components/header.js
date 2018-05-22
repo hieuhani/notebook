@@ -7,20 +7,41 @@ const Wrapper = styled.div`
 `
 const Nav = styled.nav`
   display: flex;
+  align-items: center;
+`
+
+const NavItems = styled.ul`
+  display: flex;
+  flex-direction: row;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+  margin-left: auto;
+
+  > li > a {
+    color: #FFF;
+    padding: .5rem 1rem;
+    display: block;
+  }
+`
+
+const NavLogo = styled(Link)`
+  color: #FFF;
+  font-size: 1.5rem;
 `
 
 const Header = ({ siteTitle }) => (
   <Wrapper>
     <Nav className="container">
-      <Link
-        to="/"
-        className="navbar-brand"
-      >
+      <NavLogo to="/">
         {siteTitle}
-      </Link>
-      <ul>
+      </NavLogo>
+      <NavItems>
         <li>
           <a href="#">Home</a>
+        </li>
+        <li>
+          <a href="#">Portfolio</a>
         </li>
         <li>
           <a href="#">Blog</a>
@@ -31,7 +52,7 @@ const Header = ({ siteTitle }) => (
         <li>
           <a href="#">About me</a>
         </li>
-      </ul>
+      </NavItems>
     </Nav>
   </Wrapper>
 )
