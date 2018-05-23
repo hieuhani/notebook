@@ -32,10 +32,24 @@ const NavLogo = styled(Link)`
 `
 
 const TopBar = styled.div`
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-padding: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1rem 0;
+`
+const SocialLinks = styled.ul`
+  margin: 0;
+  padding: 0;
+  display: flex;
+  li {
+    list-style: none;
+    a {
+      padding: 0 .5rem;
+      color: #FFF;
+      display: block;
+      font-size: 1.5rem;
+    }
+  }
 `
 
 const Header = ({ siteTitle }) => (
@@ -44,6 +58,20 @@ const Header = ({ siteTitle }) => (
       <NavLogo to="/">
         {siteTitle}
       </NavLogo>
+      <SocialLinks>
+        <li>
+          <a href="#"><i className="icon ion-logo-github"/></a>
+        </li>
+        <li>
+          <a href="#"><i className="icon ion-logo-facebook"/></a>
+        </li>
+        <li>
+          <a href="#"><i className="icon ion-logo-linkedin"/></a>
+        </li>
+        <li>
+          <a href="#"><i className="icon ion-logo-instagram"/></a>
+        </li>
+      </SocialLinks>
     </TopBar>
     <Nav className="container">
       <NavItems>

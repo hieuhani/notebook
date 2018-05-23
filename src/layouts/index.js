@@ -4,6 +4,7 @@ import Helmet from 'react-helmet'
 import Header from '../components/header'
 import './bootstrap-reboot.css'
 import './bootstrap-grid.css'
+import 'ionicons/dist/css/ionicons.css'
 
 const Layout = ({ children, data }) => (
   <div>
